@@ -83,8 +83,7 @@ namespace ConsoleHTTPRequest
                                 continue;
                             }
 
-                            string dataStr = inputStr.Substring(POST.Length + 2, inputStr.Length - POST.Length - 2);
-                            var data = new StringContent(dataStr, Encoding.UTF8, "application/json");
+                            var data = new StringContent(commandsStr[2], Encoding.UTF8, "application/json");
 
                             var response = await client.PutAsync($"{URL}/{commandsStr[1]}", data);
 
