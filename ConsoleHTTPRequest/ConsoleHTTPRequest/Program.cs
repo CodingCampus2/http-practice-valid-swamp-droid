@@ -59,9 +59,7 @@ namespace ConsoleHTTPRequest
 
                             var response = await client.PostAsync(URL, data);
 
-                            string result = await response.Content.ReadAsStringAsync();
-
-                            PrintResponseMessage(response, result);
+                            PrintResponseMessage(response, "Item added!");
                             break;
                         }
                     case DELETE:
